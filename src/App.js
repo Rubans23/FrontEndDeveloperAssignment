@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Auth from "./Auth/Auth.jsx";
+import Home from "./Home/Homemain/Home.jsx";
+import { Provider } from 'react-redux';
+import { store } from './Store/store';
+import Users from "./User/Users";
+import Query from "./Query/Query";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Fragment>
+            <Provider store={store}>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/userauthentication" />} />
+                    <Route path="/userauthentication" element={<Auth />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/user" element={<Users />} />
+                    <Route path="/query" element={<Query />} />
+                </Routes>
+            </Provider>
+        </Fragment>
+    );
 }
 
 export default App;
