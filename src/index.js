@@ -1,4 +1,3 @@
-// index.js
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -15,10 +14,10 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}> 
-        <Router>  
+        <Router basename={process.env.PUBLIC_URL}>  
           <App />
         </Router>
-        </PersistGate> 
+      </PersistGate> 
     </Provider>
   </React.StrictMode>
 );

@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { store } from './Store/store';
 import Users from "./User/Users";
 import Query from "./Query/Query";
+import NotFound from "./NotFound/NotFound.jsx";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/home" element={<Home />} />
                     <Route path="/user" element={<Users />} />
                     <Route path="/query" element={<Query />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </Provider>
         </Fragment>
