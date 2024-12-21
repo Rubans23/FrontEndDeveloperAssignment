@@ -15,7 +15,6 @@ function Auth() {
         navigate('/home');
       } }, 
       [navigate]);
-
   return (
     <div className="authform">
       <div className="form_div">{haveaccount ? <Signup /> : <Login />}</div>

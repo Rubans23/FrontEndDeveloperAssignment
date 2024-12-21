@@ -92,5 +92,4 @@ function Login() {
   );
 }
 
-// To test this component, you can add it to App.js and uncomment the following lines:  
 export default Login;
