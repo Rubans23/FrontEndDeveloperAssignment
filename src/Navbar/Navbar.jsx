@@ -19,9 +19,9 @@ function Navbar() {
       <nav>
         <span className="nav_logo">R</span>
         <span className="nav_links">
-          <p className="link" onClick={() => navigate('/home')}>
+          <link href='/home' className="link">
             Home
-          </p>
+          </link>
           <p className="link" onClick={() => navigate('/user')}>
             Users
           </p>
