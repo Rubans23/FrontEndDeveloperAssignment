@@ -8,6 +8,8 @@ import "./Auth.css";
 function Auth() {
   const haveaccount = useSelector((state) => state.haveaccount.haveaccount); 
   const navigate = useNavigate();
+  const homeselector = document.querySelector("body"); 
+  homeselector.style.cssText = "display: flex;";
   useEffect(() => {  
     const loggedIn = localStorage.getItem('logged_in'); 
     if (loggedIn === 'true') 
