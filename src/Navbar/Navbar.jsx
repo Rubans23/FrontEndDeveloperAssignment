@@ -1,4 +1,5 @@
-import "./Navbar.css";
+import React from 'react';
+import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
@@ -18,16 +19,18 @@ function Navbar() {
       <nav>
         <span className="nav_logo">R</span>
         <span className="nav_links">
-          <a className="link" href="/home">
+          <p className="link" onClick={() => navigate('/home')}>
             Home
-          </a>
-          <a className="link" href="/user">
+          </p>
+          <p className="link" onClick={() => navigate('/user')}>
             Users
-          </a>
-          <a className="link" href="/query">
-          Query
-          </a>
-          <a className="link" href="/" onClick={handleLogout}>Logout</a>
+          </p>
+          <p className="link" onClick={() => navigate('/query')}>
+            Query
+          </p>
+          <p className="link" onClick={handleLogout}>
+            Logout
+          </p>
         </span>
       </nav>
     </div>
@@ -35,4 +38,3 @@ function Navbar() {
 }
 
 export default Navbar;
-//new

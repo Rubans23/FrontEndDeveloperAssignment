@@ -13,7 +13,7 @@ function App() {
     return (
         <Fragment>
             <Provider store={store}>
-                <Routes basename={process.env.PUBLIC_URL} >
+                <Routes >
                     <Route path="/" element={<Navigate to="/userauthentication" />} />
                     <Route path="/userauthentication" element={<Auth />} />
                     <Route path="/home" element={<Home />} />
